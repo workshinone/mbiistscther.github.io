@@ -1,0 +1,64 @@
+extends layout.pug
+block content
+  mixin imgtag(url,alt)
+    img(src=url, alt="濡沫 Lez is more")
+
+  mixin linktag(href,target,name)
+    a(class!=attributes.class href=href, target=taget, rel="noopener noreferrer")= name
+  - var title ="濡沫 Lez is more";
+  section#main
+    .w800
+      h1.title.text-red F**K!
+      p 泡泡滿出來了，流得到處都是
+      p 濡沫生態域的深處一片狼藉，
+      P 眼神迷濛的工程師正在事後清潔中。
+      .button-text
+        +linktag("#",_blank,"回到論壇")(class="text-red")
+
+    .main-img
+      .img-lake
+        +imgtag('../images/main_img.svg')
+
+        .img-bubble.img-bubble-left
+          +imgtag('../images/bubble_left.svg')
+        .img-bubble.img-bubble-right
+          +imgtag('../images/bubble_right.svg')
+
+        .img-circle-white.img-circle-white-left
+          +imgtag('../images/circle_white.svg')
+
+        .img-circle-white.img-circle-white-right
+          +imgtag('../images/circle_white.svg')
+
+        .img-stone
+          .img-stone-body
+            +imgtag('../images/stone.svg')
+            p 404
+
+        .img-taggle-bubble
+          +imgtag('../images/qq_bubble.png')
+
+  section#social-icon
+    p.text-center.text-red 追蹤我們的社群
+    ul
+      li
+        a(href="https://www.facebook.com/lezismore.org/" target="_blank" rel="noopener noreferrer")
+          +imgtag('../images/facebook.svg')
+      li
+        a(href="https://twitter.com/lezismoretw" target="_blank" rel="noopener noreferrer")
+          +imgtag('../images/twitter.svg')
+      li
+        a(href="https://t.me/lezismore_official" target="_blank" rel="noopener noreferrer")
+          +imgtag('../images/telegram.svg')
+      li
+        a(href="https://www.instagram.com/lezismoretw/" target="_blank" rel="noopener noreferrer")
+          +imgtag('../images/instagram.svg')
+      li
+        a(href="mailto:shin@lezismore.org" target="_blank" rel="noopener noreferrer")
+          +imgtag('../images/mail.svg')
+
+block page_js
+  script.
+    $(".img-stone").click(function(){
+    $(".img-taggle-bubble").fadeToggle("400");
+    });

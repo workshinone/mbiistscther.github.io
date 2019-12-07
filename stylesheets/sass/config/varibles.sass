@@ -1,0 +1,49 @@
+@charset "utf-8"
+
+//------ varibles -------//
+
+// color
+$bg-white           : #ffffff
+
+$color-primary      : #AD3A3B
+$color-primary-light: #e28182
+
+
+$color-white        : #ffffff
+$color-gold         : #C7B299
+$color-gold-dark    : #B0936F
+
+$text-black         : #141414
+$text-white         : #ffffff
+
+$footer-bg          : #C9806F
+$shadow-color       : #FF7878
+
+
+.bg-white
+  background-color: $bg-white
+
+.bg-red
+  background-color: $color-primary
+
+.bg-primary
+  background-color: $color-primary
+
+
+
+// borer-radius
+$xs-radius: 3px
+$s-radius: 5px
+$m-radius: 8px
+$l-radius: 15px
+
+
+// hover 轉換時間
+@mixin trans-03s
+  transition: 0.3s ease
+
+@mixin trans-02s
+  transition: 0.2s ease
+
+@mixin hover-box
+  box-shadow: inset 0px 0px 10px rgba(78, 12, 12, 0.8)

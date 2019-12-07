@@ -1,0 +1,34 @@
+@keyframes button-text-hover
+  0%
+    margin-left: 0px
+  100%
+    margin-left: 6px
+
+.button-text
+  margin-left: 0px
+
+  a
+    font-size: 1.2rem
+    font-weight: 700
+    border-bottom: solid 1px $color-primary
+    +trans-02s
+
+  &:before
+    content: ""
+    width: 28px
+    height: 18px
+    background-image: url("../images/point_left_icon.svg")
+    background-repeat: no-repeat
+    background-size: 100%
+    background-position: center
+    margin-right: 10px
+    display: inline-block
+    vertical-align: middle
+    margin-top: -3px
+
+  &:hover
+    animation: button-text-hover 0.4s infinite ease-in-out alternate
+    a
+      color: $color-primary-light
+      border-bottom: solid 1px $color-primary-light
+

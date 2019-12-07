@@ -1,0 +1,146 @@
+@charset "utf-8"
+/* ----- font-face ------ */
+@font-face
+  font-family: 'SedgwickAve'
+  src: url('font/SedgwickAve-Regular.ttf')
+
+/* ----- font varibles ----- */
+$main-font            : 'Noto Serif TC'
+$en-font              : 'SedgwickAve'
+$font-size-normal     : 1rem
+
+$small-text-spacing   : 0.1rem
+$title-text-spacing   : 0.2rem
+
+
+@mixin main-font-type
+  font-family      : $main-font,'PingFang TC','Microsoft JhengHei', sans-serif
+
+@mixin title-text-spacing
+  letter-spacing   : $title-text-spacing
+
+@mixin small-text-spacing
+  letter-spacing   : $small-text-spacing
+
+
+/* ----- FONT Class ----- */
+
+.text-center
+  text-align: center
+
+.text-left
+  text-align: left
+
+.text-right
+  text-align: right
+
+.text-heavy
+  font-weight: 900
+
+.text-bold
+  font-weight: 700
+
+.text-regular
+  font-weight: 500
+
+.text-light
+  font-weight: 300
+
+
+.break-all
+  word-break: break-all
+
+
+.text-underline
+  text-decoration: underline
+
+.text-line-through
+  text-decoration: line-through
+
+.text-overline
+  text-decoration: overline
+
+.text-none-line
+  text-decoration: none
+
+.text-red
+  color: $color-primary
+
+.text-white
+  color: $color-white
+
+.text-black
+  color: $text-black
+
+
+
+/* ----- FONT ----- */
+
+h1, h2, h3, h4, h5, h6, a, p, b, small, strong, li
+  font: inherit
+  color: $text-black
+  font-family: inherit
+
+h1, h2, h3, h4, h5, h6, p, a, strong, li
+  +main-font-type
+  font-weight: 400
+  line-height: 1.5em
+
+h1, h2, h3, h4, h5, h6
+  // letter-spacing: .0em
+  line-height: 1.4em
+
+h1
+  font-size: 2.3rem
+  font-weight: 900
+  line-height: 1.9em
+  +title-text-spacing
+
+h2
+  font-size: 2.2rem
+  font-weight: 700
+  +title-text-spacing
+
+h3
+  font-size: 1.5rem
+  font-weight: 700
+  +title-text-spacing
+
+h4
+  font-size: 1.4rem
+  +title-text-spacing
+
+h5
+  font-size: 1.2rem
+  +small-text-spacing
+
+h6
+  font-size: 1rem
+  +small-text-spacing
+
+p, li
+  font-size: $font-size-normal
+  line-height: 1.5em
+  +small-text-spacing
+
+small
+  font-size: 0.9rem
+  line-height: 1.8em
+  +small-text-spacing
+
+b, strong
+  font-weight: 600
+  font-size: $font-size-normal
+  display: inline-block
+  +small-text-spacing
+
+a
+  outline: none
+  &:active, &:hover, &:focus
+    outline: none
+  font-weight: 400
+  font-size: $font-size-normal
+  display: inline-block
+  text-decoration: none
+  +small-text-spacing
+

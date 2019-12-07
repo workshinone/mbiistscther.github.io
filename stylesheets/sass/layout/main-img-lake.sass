@@ -1,0 +1,171 @@
+.main-img
+  position: absolute
+  bottom: 10%
+  width: 320%
+  max-width: 2000px
+  left: -76%
+
+.img-lake
+  position: relative
+
+
+//---------- bubble ----------//
+@keyframes bubble-left
+  0%
+    top: 14%
+  100%
+    top: 17%
+
+@keyframes bubble-right
+  0%
+    top: 4%
+  100%
+    top: 1%
+
+.img-bubble
+  position: absolute
+  width: 2.5%
+
+.img-bubble-left
+  top: 14%
+  right: 60%
+  animation: bubble-left 1.3s infinite ease-in-out alternate
+
+.img-bubble-right
+  top: 4%
+  right: 48%
+  animation: bubble-right 1.3s infinite ease-in-out alternate
+
+
+//---------- circle-white ----------//
+
+@keyframes circle-left
+  0%
+    bottom: 47%
+  100%
+    bottom: 45%
+
+
+@keyframes circle-right
+  0%
+    top: 19%
+  100%
+    top: 22%
+
+
+.img-circle-white
+  position: absolute
+
+
+.img-circle-white-left
+  bottom: 47%
+  right: 67%
+  width: 1.5%
+  animation: circle-left 1.7s infinite ease-in-out alternate
+
+.img-circle-white-right
+  top: 19%
+  right: 43%
+  width: 1%
+  animation: circle-right 1s infinite ease-in-out alternate
+
+
+
+//---------- stone ----------//
+.img-stone
+  position: absolute
+  bottom: 46%
+  left: 48.7%
+  width: 8%
+
+
+.img-stone-body
+  position: relative
+  cursor: pointer
+  p
+    font-family: $en-font
+    display: inline-block
+    position: absolute
+    bottom: 29%
+    right: 39%
+    color: #E28D8F
+    mix-blend-mode: multiply
+    opacity: 0.5
+    +trans-02s
+
+  &:hover
+    p
+      mix-blend-mode: screen
+
+.img-lake-bg
+  position: absolute
+  width: 200%
+  top: 10%
+  img
+    mix-blend-mode: hard-light
+
+
+@keyframes taggle-bubble
+  0%
+    top: 20%
+  100%
+    top: 16%
+
+
+.img-taggle-bubble
+  position: absolute
+  width: 5%
+  top: 20%
+  left: 45%
+  display: none
+  filter: drop-shadow(0px 3px 7px rgba(255, 146, 120, 0.9))
+  animation: taggle-bubble 1s infinite ease-in-out alternate
+  +trans-03s
+
+  img
+    width: 100%
+
+// .main-img
+//   .active
+//     display: block
+//     width: 5%
+
+
+
+//---------- rwd ----------//
+
+@media screen and(min-width: 425px)
+  .img-stone-body
+    p
+      bottom: 39%
+      right: 36%
+
+
+
+@media screen and(min-width: 506px)
+  .main-img
+    bottom: 8%
+  .img-stone-body
+    p
+      bottom: 48%
+      right: 43%
+
+@media screen and(min-width: 622px)
+  .main-img
+    left: -68%
+
+@media screen and(min-width: 762px)
+  .main-img
+    left: -53%
+
+@media screen and(min-width: 860px)
+  .main-img
+    left: -40%
+
+@media screen and(min-width: 860px)
+  .main-img
+    left: -20%
+
+@media screen and(min-width: 1200px)
+  .main-img
+    left: 8%

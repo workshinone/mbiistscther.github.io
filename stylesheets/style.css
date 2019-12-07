@@ -1,0 +1,547 @@
+/* ---------------- config ------------------ */
+/* ----- RESET ----- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', serif;
+  font-weight: 300;
+  outline: inherit; }
+
+body {
+  position: relative; }
+
+h1, h2, h3, h4, p, a, small, ul, li, span {
+  padding: 0;
+  margin: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+  list-style-type: none; }
+
+ul, li {
+  list-style: none; }
+
+/* ----- Block ----- */
+.w90 {
+  width: 90%;
+  margin: 0 auto; }
+
+.w800, .w900, .w1200, .w1600 {
+  width: 90%;
+  position: relative;
+  margin: 0 auto; }
+
+.w900 {
+  max-width: 900px; }
+
+.w800 {
+  max-width: 800px; }
+
+.w1200 {
+  max-width: 1200px; }
+
+.w1600 {
+  max-width: 1600px; }
+
+.row {
+  width: 100%;
+  position: relative; }
+
+.bg-white {
+  background-color: #ffffff; }
+
+.bg-red {
+  background-color: #AD3A3B; }
+
+.bg-primary {
+  background-color: #AD3A3B; }
+
+/* ----- font-face ------ */
+@font-face {
+  font-family: 'SedgwickAve';
+  src: url("font/SedgwickAve-Regular.ttf"); }
+
+/* ----- font varibles ----- */
+/* ----- FONT Class ----- */
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-heavy {
+  font-weight: 900; }
+
+.text-bold {
+  font-weight: 700; }
+
+.text-regular {
+  font-weight: 500; }
+
+.text-light {
+  font-weight: 300; }
+
+.break-all {
+  word-break: break-all; }
+
+.text-underline {
+  text-decoration: underline; }
+
+.text-line-through {
+  text-decoration: line-through; }
+
+.text-overline {
+  text-decoration: overline; }
+
+.text-none-line {
+  text-decoration: none; }
+
+.text-red {
+  color: #AD3A3B; }
+
+.text-white {
+  color: #ffffff; }
+
+.text-black {
+  color: #141414; }
+
+/* ----- FONT ----- */
+h1, h2, h3, h4, h5, h6, a, p, b, small, strong, li {
+  font: inherit;
+  color: #141414;
+  font-family: inherit; }
+
+h1, h2, h3, h4, h5, h6, p, a, strong, li {
+  font-family: "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  font-weight: 400;
+  line-height: 1.5em; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4em; }
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 900;
+  line-height: 1.9em;
+  letter-spacing: 0.2rem; }
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem; }
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem; }
+
+h4 {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem; }
+
+h5 {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem; }
+
+h6 {
+  font-size: 1rem;
+  letter-spacing: 0.1rem; }
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.5em;
+  letter-spacing: 0.1rem; }
+
+small {
+  font-size: 0.9rem;
+  line-height: 1.8em;
+  letter-spacing: 0.1rem; }
+
+b, strong {
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-block;
+  letter-spacing: 0.1rem; }
+
+a {
+  outline: none;
+  font-weight: 400;
+  font-size: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 0.1rem; }
+  a:active, a:hover, a:focus {
+    outline: none; }
+
+@-webkit-keyframes button-text-hover {
+  0% {
+    margin-left: 0px; }
+  100% {
+    margin-left: 6px; } }
+
+@keyframes button-text-hover {
+  0% {
+    margin-left: 0px; }
+  100% {
+    margin-left: 6px; } }
+
+.button-text {
+  margin-left: 0px; }
+  .button-text a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-bottom: solid 1px #AD3A3B;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease; }
+  .button-text:before {
+    content: "";
+    width: 28px;
+    height: 18px;
+    background-image: url("../images/point_left_icon.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px; }
+  .button-text:hover {
+    -webkit-animation: button-text-hover 0.4s infinite ease-in-out alternate;
+    animation: button-text-hover 0.4s infinite ease-in-out alternate; }
+    .button-text:hover a {
+      color: #e28182;
+      border-bottom: solid 1px #e28182; }
+
+/* ---------------- layout ------------------ */
+body {
+  min-width: 320px;
+  background-image: url("../images/404_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center; }
+
+nav {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  -webkit-box-shadow: 0px 11px 25px rgba(255, 197, 163, 0.3);
+  box-shadow: 0px 11px 25px rgba(255, 197, 163, 0.3); }
+  nav img {
+    width: 80px;
+    height: auto;
+    padding-top: 13px;
+    padding-bottom: 13px; }
+
+@media screen and (min-width: 425px) {
+  nav img {
+    width: 105px;
+    padding-top: 20px;
+    padding-bottom: 20px; } }
+
+#main {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+  #main .w800 {
+    margin-top: 110px;
+    z-index: 1; }
+  #main p {
+    margin-bottom: 3px;
+    font-size: 0.85rem;
+    z-index: 1; }
+  #main .button-text {
+    margin-top: 20px; }
+
+.title {
+  font-size: 3.5rem;
+  line-height: 1.2em;
+  font-family: "SedgwickAve";
+  text-shadow: 0px 3px 8px rgba(255, 146, 113, 0.6); }
+
+@media screen and (min-width: 400px) {
+  #main .w800 {
+    margin-top: 160px; }
+  #main .title {
+    font-size: 4.5rem;
+    line-height: 1.9em; } }
+
+.main-img {
+  position: absolute;
+  bottom: 10%;
+  width: 320%;
+  max-width: 2000px;
+  left: -76%; }
+
+.img-lake {
+  position: relative; }
+
+@-webkit-keyframes bubble-left {
+  0% {
+    top: 14%; }
+  100% {
+    top: 17%; } }
+
+@keyframes bubble-left {
+  0% {
+    top: 14%; }
+  100% {
+    top: 17%; } }
+
+@-webkit-keyframes bubble-right {
+  0% {
+    top: 4%; }
+  100% {
+    top: 1%; } }
+
+@keyframes bubble-right {
+  0% {
+    top: 4%; }
+  100% {
+    top: 1%; } }
+
+.img-bubble {
+  position: absolute;
+  width: 2.5%; }
+
+.img-bubble-left {
+  top: 14%;
+  right: 60%;
+  -webkit-animation: bubble-left 1.3s infinite ease-in-out alternate;
+  animation: bubble-left 1.3s infinite ease-in-out alternate; }
+
+.img-bubble-right {
+  top: 4%;
+  right: 48%;
+  -webkit-animation: bubble-right 1.3s infinite ease-in-out alternate;
+  animation: bubble-right 1.3s infinite ease-in-out alternate; }
+
+@-webkit-keyframes circle-left {
+  0% {
+    bottom: 47%; }
+  100% {
+    bottom: 45%; } }
+
+@keyframes circle-left {
+  0% {
+    bottom: 47%; }
+  100% {
+    bottom: 45%; } }
+
+@-webkit-keyframes circle-right {
+  0% {
+    top: 19%; }
+  100% {
+    top: 22%; } }
+
+@keyframes circle-right {
+  0% {
+    top: 19%; }
+  100% {
+    top: 22%; } }
+
+.img-circle-white {
+  position: absolute; }
+
+.img-circle-white-left {
+  bottom: 47%;
+  right: 67%;
+  width: 1.5%;
+  -webkit-animation: circle-left 1.7s infinite ease-in-out alternate;
+  animation: circle-left 1.7s infinite ease-in-out alternate; }
+
+.img-circle-white-right {
+  top: 19%;
+  right: 43%;
+  width: 1%;
+  -webkit-animation: circle-right 1s infinite ease-in-out alternate;
+  animation: circle-right 1s infinite ease-in-out alternate; }
+
+.img-stone {
+  position: absolute;
+  bottom: 46%;
+  left: 48.7%;
+  width: 8%; }
+
+.img-stone-body {
+  position: relative;
+  cursor: pointer; }
+  .img-stone-body p {
+    font-family: "SedgwickAve";
+    display: inline-block;
+    position: absolute;
+    bottom: 29%;
+    right: 39%;
+    color: #E28D8F;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease; }
+  .img-stone-body:hover p {
+    mix-blend-mode: screen; }
+
+.img-lake-bg {
+  position: absolute;
+  width: 200%;
+  top: 10%; }
+  .img-lake-bg img {
+    mix-blend-mode: hard-light; }
+
+@-webkit-keyframes taggle-bubble {
+  0% {
+    top: 20%; }
+  100% {
+    top: 16%; } }
+
+@keyframes taggle-bubble {
+  0% {
+    top: 20%; }
+  100% {
+    top: 16%; } }
+
+.img-taggle-bubble {
+  position: absolute;
+  width: 5%;
+  top: 20%;
+  left: 45%;
+  display: none;
+  -webkit-filter: drop-shadow(0px 3px 7px rgba(255, 146, 120, 0.9));
+  filter: drop-shadow(0px 3px 7px rgba(255, 146, 120, 0.9));
+  -webkit-animation: taggle-bubble 1s infinite ease-in-out alternate;
+  animation: taggle-bubble 1s infinite ease-in-out alternate;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease; }
+  .img-taggle-bubble img {
+    width: 100%; }
+
+@media screen and (min-width: 425px) {
+  .img-stone-body p {
+    bottom: 39%;
+    right: 36%; } }
+
+@media screen and (min-width: 506px) {
+  .main-img {
+    bottom: 8%; }
+  .img-stone-body p {
+    bottom: 48%;
+    right: 43%; } }
+
+@media screen and (min-width: 622px) {
+  .main-img {
+    left: -68%; } }
+
+@media screen and (min-width: 762px) {
+  .main-img {
+    left: -53%; } }
+
+@media screen and (min-width: 860px) {
+  .main-img {
+    left: -40%; } }
+
+@media screen and (min-width: 860px) {
+  .main-img {
+    left: -20%; } }
+
+@media screen and (min-width: 1200px) {
+  .main-img {
+    left: 8%; } }
+
+#social-icon {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 80px; }
+  #social-icon ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 250px;
+    margin: 0 auto;
+    padding-top: 10px; }
+    #social-icon ul li {
+      width: 33px;
+      -webkit-filter: drop-shadow(0px 3px 7px rgba(255, 146, 120, 0.5));
+      filter: drop-shadow(0px 3px 7px rgba(255, 146, 120, 0.5));
+      -webkit-transition: 0.2s ease;
+      -o-transition: 0.2s ease;
+      transition: 0.2s ease; }
+      #social-icon ul li:hover {
+        -webkit-filter: drop-shadow(0px 1px 1px rgba(255, 146, 120, 0.8));
+        filter: drop-shadow(0px 1px 1px rgba(255, 146, 120, 0.8));
+        -webkit-transform: translatey(2px);
+        -ms-transform: translatey(2px);
+        transform: translatey(2px); }
+        #social-icon ul li:hover img {
+          opacity: 1; }
+    #social-icon ul img {
+      width: 100%;
+      opacity: 0.7;
+      -webkit-transition: 0.2s ease;
+      -o-transition: 0.2s ease;
+      transition: 0.2s ease; }
+
+@media screen and (min-width: 425px) {
+  #social-icon {
+    margin-bottom: 95px; } }
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  background-color: #C9806F;
+  -webkit-box-shadow: 0px -11px 25px rgba(255, 120, 120, 0.4);
+  box-shadow: 0px -11px 25px rgba(255, 120, 120, 0.4);
+  z-index: 2; }
+  footer small {
+    font-size: 0.6rem;
+    line-height: 1.6em; }
+
+@media screen and (min-width: 425px) {
+  footer {
+    padding-top: 17px;
+    padding-bottom: 17px; }
+    footer small {
+      font-size: 0.7rem;
+      line-height: 1.8em; } }

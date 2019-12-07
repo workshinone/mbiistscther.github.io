@@ -1,0 +1,33 @@
+#social-icon
+  position: fixed
+  bottom: 0
+  z-index: 1
+  width: 100%
+  margin-bottom: 80px
+  ul
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 250px
+    margin: 0 auto
+    padding-top: 10px
+
+    li
+      width: 33px
+      filter: drop-shadow(0px 3px 7px rgba(255, 146, 120, 0.5))
+      +trans-02s
+
+      &:hover
+        filter: drop-shadow(0px 1px 1px rgba(255, 146, 120, 0.8))
+        transform: translatey(2px)
+        img
+          opacity: 1
+
+    img
+      width: 100%
+      opacity: 0.7
+      +trans-02s
+
+@media screen and(min-width: 425px)
+  #social-icon
+    margin-bottom: 95px

@@ -4,7 +4,7 @@ block content
     img(src=url, alt="濡沫 Lez is more")
 
   mixin linktag(href,target,name)
-    a(class!=attributes.class href=href, target=taget, rel="noopener noreferrer")= name
+    a(class!=attributes.class href=href, target=target, rel="noopener noreferrer")= name
   - var title ="濡沫 Lez is more";
   section#main
     .w800
@@ -13,7 +13,7 @@ block content
       p 濡沫生態域的深處一片狼藉，
       P 眼神迷濛的工程師正在事後清潔中。
       .button-text
-        +linktag("#",_blank,"回到論壇")(class="text-red")
+        +linktag("https://lezismore.org/","_slef","回到主站")(class="text-red")
 
     .main-img
       .img-lake
